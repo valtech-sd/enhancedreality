@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Libre-Baskerville-Italic';
+    src: url('../font/LibreBaskerville-Italic.woff2') format('woff2'),
+        url('../font/LibreBaskerville-Italic.woff') format('woff');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neue-Plak-Bold';
+    src: url('../font/NeuePlak-Bold.woff2') format('woff2'),
+        url('../font/NeuePlak-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Plak-Light';
+    src: url('../font/NeuePlak-Light.woff2') format('woff2'),
+        url('../font/NeuePlak-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Plak-Reg';
+    src: url('../font/NeuePlak-Regular.woff2') format('woff2'),
+        url('../font/NeuePlak-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
