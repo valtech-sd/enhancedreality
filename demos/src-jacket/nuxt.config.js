@@ -31,7 +31,7 @@ export default {
   plugins: [
   ],
   router: {
-    base: '/'
+    base: '/enhancedreality/'
   },
   /*
   ** Nuxt.js dev-modules
