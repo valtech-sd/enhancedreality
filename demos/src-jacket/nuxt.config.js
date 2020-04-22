@@ -30,6 +30,9 @@ export default {
   */
   plugins: [
   ],
+  router: {
+    base: '/jacket/'
+  },
   /*
   ** Nuxt.js dev-modules
   */
@@ -51,8 +54,5 @@ export default {
     */
     extend (config, ctx) {
     }
-  },
-  // generate: {
-  //   dir: '../../demos/jacket'
-  // }
+  }
 }

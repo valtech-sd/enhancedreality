@@ -1,6 +1,6 @@
-# webar_innovation_jackets
+# src-jacket
 
-> Valtech WEBAR landing page
+> My tiptop Nuxt.js project
 
 ## Build Setup
 

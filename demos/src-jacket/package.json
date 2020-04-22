@@ -1,7 +1,7 @@
 {
-  "name": "webar_innovation_jackets",
+  "name": "src-jacket",
   "version": "1.0.0",
-  "description": "Valtech WEBAR landing page",
+  "description": "My tiptop Nuxt.js project",
   "author": "Valtech",
   "private": true,
   "scripts": {

@@ -20,7 +20,7 @@
         <div class="product__price">
           <div>$349.99</div>
           <div class="rate">
-            <StarRating :rating="config.rating" :starStyle="config.style" :isIndicatorActive="false" />
+            <StarRating :rating="config.rating" :star-style="config.style" :is-indicator-active="false" />
             <span>(1299)</span>
           </div>
         </div>
