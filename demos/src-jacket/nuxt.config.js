@@ -31,7 +31,7 @@ export default {
   plugins: [
   ],
   router: {
-    base: '/jacket/'
+    base: '/'
   },
   /*
   ** Nuxt.js dev-modules
