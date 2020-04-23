@@ -37,22 +37,36 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~/assets/styles/_mixin.scss';
 .col{
     display: grid;
-    max-width: 60vw;
     margin: 0 auto;
-    padding: 24vh 0px;
+    padding: 10vh 0px;
+    @include breakpoint('lg') {
+      padding: 24vh 0px;
+      max-width: 60vw;
+    }
     &__3{
+
+      > div{
+        margin-bottom: 2.5rem;
+      }
+
+      @include breakpoint('lg') {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 5rem;
         grid-row-gap: 0px;
+      }
     }
 
     h3{
         font-size: 2.3rem;
-        margin-bottom: 2.5rem;
-        min-height: 70px;
+        margin-bottom: 1rem;
+        @include breakpoint('lg') {
+          min-height: 70px;
+          margin-bottom: 2.5rem;
+        }
     }
 }
 </style>

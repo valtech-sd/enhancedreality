@@ -22,13 +22,20 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~/assets/styles/_mixin.scss';
+
 .sidebar{
-    display: flex;
+    display: none;
     align-items: center;
     transform: rotate(-90deg);
     position: absolute;
     top: 11.5rem;
     left: -2rem;
+
+    @include breakpoint ('mdpi'){
+      display: flex;
+    }
+
     .num{
         font-size: 3.5rem;
         margin-right: 2rem;

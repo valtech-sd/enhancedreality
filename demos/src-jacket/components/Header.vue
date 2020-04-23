@@ -10,10 +10,17 @@
       <a href="#">Accesories</a>
       <a href="#">About</a>
     </nav>
+
+    <div class="burger">
+      <span />
+      <span />
+    </div>
   </header>
 </template>
 
 <style lang="scss">
+@import '~/assets/styles/_mixin.scss';
+
 header{
     position: absolute!important;
     z-index: 1;
@@ -23,9 +30,14 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 13rem;
+    height: 10rem;
     font-size: 1.6rem;
     color: white;
+
+    @include breakpoint('lg') {
+        height: 13rem;
+    }
+
     .logo{
         display: flex;
         align-items: center;
@@ -34,9 +46,15 @@ header{
         }
         span{
             color: white;
+            display: none;
+            @include breakpoint('lg') {
+              display: block;
+            }
         }
     }
     nav{
+      display: none;
+      @include breakpoint('lg') {
         display: flex;
         a{
             margin-right: 2.5rem;
@@ -44,6 +62,22 @@ header{
                 margin-right: 0;
             }
         }
+      }
+    }
+    .burger{
+      width: 12vw;
+
+      @include breakpoint('lg') {
+        display: none;
+      }
+
+      span{
+        display: block;
+        width: 100%;
+        height: 6px;
+        background-color: #fff;
+        margin-bottom: 1rem;
+      }
     }
 }
 </style>

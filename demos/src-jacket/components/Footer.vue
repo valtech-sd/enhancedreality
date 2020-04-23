@@ -50,30 +50,50 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~/assets/styles/_mixin.scss';
+
 footer {
-  background-size: 100%;
-  background-position: bottom left;
+  background-size: cover;
+  background-position: 16%;
   background-repeat: no-repeat;
-  padding-bottom: 9.5rem;
-  padding-top: 20.5rem;
-  min-height: 60vh;
+  padding-bottom: 3rem;
+  padding-top: 6rem;
   font-size: 1.2rem;
   color: white;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+
+  @include breakpoint('lg') {
+    background-position: bottom left;
+    background-size: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding-bottom: 9.5rem;
+    padding-top: 20.5rem;
+  }
 
   .upper_nav {
-    flex: 0 1 100%;
-    display: flex;
-    align-items: stretch;
-    padding: 0 6rem;
+
+    @include breakpoint('lg') {
+      padding: 0 6rem;
+      flex: 0 1 100%;
+      display: flex;
+      align-items: stretch;
+    }
 
     nav{
-        flex: 0 1 20%;
+      margin-bottom: 4rem;
+
+        @include breakpoint('lg') {
+          flex: 0 1 20%;
+          margin-bottom: 0;
+        }
         a{
             display: block;
-            margin-bottom: 4rem;
+            margin-bottom: 1rem;
+            @include breakpoint('lg') {
+              margin-bottom: 4rem;
+            }
             &:last-child{
                 margin-bottom: 0;
             }
@@ -81,22 +101,36 @@ footer {
     }
 
     .logo_section{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: auto;
+      margin-top: 4rem;
+        @include breakpoint('lg') {
+          margin-top: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-left: auto;
+        }
         img{
             flex: 0 1 auto;
+            margin-bottom: 2rem;
         }
     }
   }
   .down_nav{
-    padding: 0 6rem;
-    margin-top: 14rem;
-    flex: 0 1 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 4rem;
+
+    @include breakpoint('lg') {
+      margin-top: 1rem;
+      flex: 0 1 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 6rem;
+      margin-top: 14rem;
+    }
+
+    .terms{
+      margin-top: 2rem;
+    }
   }
 
 }

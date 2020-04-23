@@ -14,10 +14,17 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '~/assets/styles/_mixin.scss';
+
 .video {
-    height: 70rem;
     width: 100vw;
+    height: 50vh;
     position: relative;
+
+    @include breakpoint('lg') {
+      height: 70rem;
+    }
+
     img{
       object-fit: cover;
       width: 100vw;
