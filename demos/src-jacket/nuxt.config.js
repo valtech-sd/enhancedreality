@@ -1,6 +1,10 @@
 
 export default {
   mode: 'spa',
+  server: {     
+    port: 8000, // default: 3000     
+    host: '0.0.0.0', // default: localhost   
+  },
   /*
   ** Headers of the page
   */
@@ -13,6 +17,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/jacket/favicon.ico' }
+    ],
+    script: [
+      { type:'module', src:'https://unpkg.com/@google/model-viewer/dist/model-viewer.js' },
+      { nomodule:'nomodule', src:'https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js' }
     ]
   },
   /*
