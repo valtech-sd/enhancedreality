@@ -25,13 +25,13 @@
             >
               Tap the Jacket for AR experience
             </model-viewer> -->
-            <a v-if="$browserDetect.isIOS" rel="ar" href="https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket.usdz" class="ar-link">
+            <a v-if="$browserDetect.isIOS" rel="ar" :href="version.ar_model_ios_src" class="ar-link">
               <div>
                 <img src="/jacket/assets/images/misc/ar-icon.png">
                 Tap the Jacket for AR experience
               </div>
             </a>
-            <a v-else href="intent://arvr.google.com/scene-viewer/1.0?file=https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://enhancedreality.valtech.engineering/jacket/;end;" class="ar-link">
+            <a v-else :href="`intent://arvr.google.com/scene-viewer/1.0?file=${version.ar_model_and_src}#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://enhancedreality.valtech.engineering/jacket/;end;`" class="ar-link">
               <div>
                 <img src="/jacket/assets/images/misc/ar-icon.png">
                 Tap the Jacket for AR experience
@@ -125,22 +125,22 @@ export default {
               name: 'Woodland',
               img: 'assets/images/jackets/jacket_1.png',
               qr_code: 'assets/images/qr_codes/01_Woodland.png',
-              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/fender_stratocaster.usdz',
-              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb'
+              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Woodland.usdz',
+              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Woodland.glb'
             },
             {
               name: 'HighDesert',
               img: 'assets/images/jackets/jacket_2.png',
               qr_code: 'assets/images/qr_codes/02_High_Desert.png',
-              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/fender_stratocaster.usdz',
-              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb'
+              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Woodland.usdz',
+              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Woodland.glb'
             },
             {
               name: 'Riparian',
               img: 'assets/images/jackets/jacket_3.png',
               qr_code: 'assets/images/qr_codes/03_Riparian.png',
-              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/fender_stratocaster.usdz',
-              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb'
+              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Riparian.usdz',
+              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Riparian.glb'
             }
           ]
         }
