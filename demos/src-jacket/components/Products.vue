@@ -31,7 +31,7 @@
                 Tap the Jacket for AR experience
               </div>
             </a>
-            <a v-else href="intent://arvr.google.com/scene-viewer/1.0?file=https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://enhancedreality.valtech.engineering/jacket/;end;" class="ar-link">
+            <a v-else href="intent://arvr.google.com/scene-viewer/1.0?file=https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://enhancedreality.valtech.engineering/jacket/;end;" class="ar-link">
               <div>
                 <img src="/jacket/assets/images/misc/ar-icon.png">
                 Tap the Jacket for AR experience
