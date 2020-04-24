@@ -25,13 +25,17 @@
             >
               Tap the Jacket for AR experience
             </model-viewer> -->
-            <a v-if="$browserDetect.isIOS" rel="ar" href="https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket.usdz" class="ar-link only-mobile">
-              <img src="/jacket/assets/images/misc/ar-icon.png">
-              Tap the Jacket for AR experience IOS
+            <a v-if="$browserDetect.isIOS" rel="ar" href="https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket.usdz" class="ar-link">
+              <div>
+                <img src="/jacket/assets/images/misc/ar-icon.png">
+                Tap the Jacket for AR experience
+              </div>
             </a>
-            <a v-else href="intent://arvr.google.com/scene-viewer/1.0?file=https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;" class="ar-link only-mobile">
-              <img src="/jacket/assets/images/misc/ar-icon.png">
-              Tap the Jacket for AR experience Android
+            <a v-else href="intent://arvr.google.com/scene-viewer/1.0?file=https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://enhancedreality.valtech.engineering/jacket/;end;" class="ar-link">
+              <div>
+                <img src="/jacket/assets/images/misc/ar-icon.png">
+                Tap the Jacket for AR experience
+              </div>
             </a>
           </div>
         </div>
@@ -212,6 +216,11 @@ export default {
         transition: all 0.3s ease-out;
 
         pointer-events: none;
+        padding-bottom: 5rem;
+
+        @include breakpoint('lg') {
+          padding-bottom: 0;
+        }
 
         &__full{
             position: relative;
@@ -246,7 +255,7 @@ export default {
 
 }
 .product-details{
-    padding-top: 5vh;
+    padding-top: 8vh;
 
     @include breakpoint('lg') {
       flex: 0 1 40%;
@@ -405,10 +414,24 @@ export default {
     }
 }
 .ar-link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+  > div{
+    display: flex;
+    align-items: center;
+  }
   img{
     margin-right: 2rem;
+  }
+  @include breakpoint('lg') {
+    display: none;
   }
 }
 </style>
