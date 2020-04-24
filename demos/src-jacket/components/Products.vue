@@ -1,28 +1,38 @@
 /* eslint-disable vue/html-self-closing */
 <template>
   <section class="product-container" :style="{ backgroundImage: `url(${headerBackground})` }">
-
     <SideBar />
     <div class="product-wrapper container">
       <div class="product-view">
-        <div v-for="(version, index) in products[0].versions" :key="index" :class="colorSelected == index ? 'active' : ''" class="product-single">
+        <div
+          v-for="(version, index) in products[0].versions"
+          :key="index"
+          :class="colorSelected == index ? 'active' : ''"
+          class="product-single"
+        >
           <img class="product-single__full" :src="version.img" alt="">
           <div class="qr-code">
             <img class="product-single__qr-code" :src="version.qr_code" alt="">
             <span class="only-desktop">Scan the QR  code for AR experience</span>
-            <span class="only-mobile">Tap the Jacket for AR experience</span>
-            <model-viewer
+            <!-- <model-viewer
               src="/jacket/ar/Astronaut.glb"
               ar
-              ar-modes="scene-viewer quick-look fallback"
+              ar-modes="webxr scene-viewer quick-look fallback"
               ar-scale="auto"
               camera-controls
               alt="A 3D model of an astronaut"
               ios-src="/jacket/ar/fender_stratocaster.usdz"
             >
               Tap the Jacket for AR experience
-            </model-viewer>
-            <!-- <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">Tap the Jacket for AR experience</a> -->
+            </model-viewer> -->
+            <a v-if="$browserDetect.isIOS" rel="ar" href="/jacket/ar/fender_stratocaster.usdz" class="ar-link only-mobile">
+              <img src="/jacket/assets/images/misc/ar-icon.png">
+              Tap the Jacket for AR experience IOS
+            </a>
+            <a v-else href="intent://arvr.google.com/scene-viewer/1.0?file=https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;" class="ar-link only-mobile">
+              <img src="/jacket/assets/images/misc/ar-icon.png">
+              Tap the Jacket for AR experience Android
+            </a>
           </div>
         </div>
       </div>
@@ -111,19 +121,22 @@ export default {
               name: 'Woodland',
               img: 'assets/images/jackets/jacket_1.png',
               qr_code: 'assets/images/qr_codes/01_Woodland.png',
-              ar_model_ios_src: 'demos/src-jacket/static/ar/fender_stratocaster.usdz'
+              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/fender_stratocaster.usdz',
+              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb'
             },
             {
               name: 'HighDesert',
               img: 'assets/images/jackets/jacket_2.png',
               qr_code: 'assets/images/qr_codes/02_High_Desert.png',
-              ar_model_ios_src: 'demos/src-jacket/static/ar/fender_stratocaster.usdz'
+              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/fender_stratocaster.usdz',
+              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb'
             },
             {
               name: 'Riparian',
               img: 'assets/images/jackets/jacket_3.png',
               qr_code: 'assets/images/qr_codes/03_Riparian.png',
-              ar_model_ios_src: 'demos/src-jacket/static/ar/fender_stratocaster.usdz'
+              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/fender_stratocaster.usdz',
+              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/Astronaut.glb'
             }
           ]
         }
@@ -205,11 +218,11 @@ export default {
             left: -2rem;
             @include breakpoint('lg') {
               left: -4rem;
-              height: 70rem;
+              height: 66rem;
             }
         }
         &__qr-code{
-            height: 113px;
+            height: 213px;
             width: auto;
             margin: 0 auto;
             margin-bottom: 3rem;
@@ -218,6 +231,12 @@ export default {
             @include breakpoint('lg') {
               display: block;
             }
+        }
+        .qr-code{
+          @include breakpoint('lg') {
+            position: relative;
+            top: -2rem;
+          }
         }
         &.active{
             opacity: 1;
@@ -384,5 +403,12 @@ export default {
             }
         }
     }
+}
+.ar-link{
+  display: flex;
+  align-items: center;
+  img{
+    margin-right: 2rem;
+  }
 }
 </style>
