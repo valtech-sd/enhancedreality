@@ -25,7 +25,7 @@
             >
               Tap the Jacket for AR experience
             </model-viewer> -->
-            <a v-if="$browserDetect.isIOS" rel="ar" href="/jacket/ar/fender_stratocaster.usdz" class="ar-link only-mobile">
+            <a v-if="$browserDetect.isIOS" rel="ar" href="https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket.usdz" class="ar-link only-mobile">
               <img src="/jacket/assets/images/misc/ar-icon.png">
               Tap the Jacket for AR experience IOS
             </a>
