@@ -125,22 +125,22 @@ export default {
               name: 'Woodland',
               img: 'assets/images/jackets/jacket_1.png',
               qr_code: 'assets/images/qr_codes/01_Woodland.png',
-              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Woodland.usdz',
-              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Woodland.glb'
+              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/01_M90_Jacket_Woodland.usdz',
+              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/01_M90_Jacket_Woodland.glb'
             },
             {
               name: 'HighDesert',
               img: 'assets/images/jackets/jacket_2.png',
               qr_code: 'assets/images/qr_codes/02_High_Desert.png',
-              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Woodland.usdz',
-              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Woodland.glb'
+              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/02_M90_Jacket_High_Desert.usdz',
+              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/02_M90_Jacket_High_Desert.glb'
             },
             {
               name: 'Riparian',
               img: 'assets/images/jackets/jacket_3.png',
               qr_code: 'assets/images/qr_codes/03_Riparian.png',
-              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Riparian.usdz',
-              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/M90_Jacket_Riparian.glb'
+              ar_model_ios_src: 'https://enhancedreality.valtech.engineering/jacket/ar/03_M90_Jacket_Riparian.usdz',
+              ar_model_and_src: 'https://enhancedreality.valtech.engineering/jacket/ar/03_M90_Jacket_Riparian.glb'
             }
           ]
         }
