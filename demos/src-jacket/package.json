@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "mobile-device-detect": "^0.3.3",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2",
     "vue-browser-detect-plugin": "^0.1.8",
